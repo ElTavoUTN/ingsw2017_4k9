@@ -8,22 +8,22 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class CalculadoraTest {
-    
+
     public CalculadoraTest() {
     }
-    
+
     @BeforeClass
     public static void setUpClass() {
     }
-    
+
     @AfterClass
     public static void tearDownClass() {
     }
-    
+
     @Before
     public void setUp() {
     }
-    
+
     @After
     public void tearDown() {
     }
@@ -34,13 +34,12 @@ public class CalculadoraTest {
     @Test
     public void testSumar() {
         System.out.println("sumar");
-        int a = 0;
-        int b = 0;
-        int expResult = 0;
-        int result = Calculadora.sumar(a, b);
+        int x = 4;
+        int y = 5;
+        int expResult = 9;
+        int result = Calculadora.sumar(x, y);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -49,13 +48,12 @@ public class CalculadoraTest {
     @Test
     public void testRestar() {
         System.out.println("restar");
-        int a = 0;
-        int b = 0;
-        int expResult = 0;
-        int result = Calculadora.restar(a, b);
+        int x = 12;
+        int y = 10;
+        int expResult = 2;
+        int result = Calculadora.restar(x, y);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -64,13 +62,12 @@ public class CalculadoraTest {
     @Test
     public void testMultiplicar() {
         System.out.println("multiplicar");
-        int a = 0;
-        int b = 0;
-        int expResult = 0;
-        int result = Calculadora.multiplicar(a, b);
+        int x = 6;
+        int y = 2;
+        int expResult = 12;
+        int result = Calculadora.multiplicar(x, y);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -79,31 +76,35 @@ public class CalculadoraTest {
     @Test
     public void testDividir() {
         System.out.println("dividir");
-        int a = 0;
+        int a = 7;
+        int b = 2;
+        int expResult = 3;
+        int result = Calculadora.dividir(a, b);
+        assertEquals(expResult, result);
+
+    }
+
+    public void testDividirPorCero() {
+        System.out.println("dividir Por Cero");
+        int a = 7;
         int b = 0;
         int expResult = 0;
         int result = Calculadora.dividir(a, b);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
-    /**
-     * Test of distribucion method, of class Calculadora.
-     */
     @Test
     public void testDistribucion() {
         System.out.println("distribucion");
-        int a = 0;
-        int b = 0;
-        int c = 0;
-        char o1 = ' ';
-        char o2 = ' ';
+        int a = 3;
+        int b = 2;
+        int c = 2;
+        char op1 = '*';
+        char op2 = '-';
         int expResult = 0;
-        int result = Calculadora.distribucion(a, b, c, o1, o2);
+        int result = Calculadora.distribucion(a, b, c, op1, op2);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
-    
+
 }
