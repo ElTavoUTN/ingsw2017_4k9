@@ -14,9 +14,9 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import proyectotestunitario.Alumno;
-import proyectotestunitario.Ejercicio;
-import proyectotestunitario.Profesor;
+import tp5ingsw4k9.Alumno;
+import tp5ingsw4k9.Ejercicio;
+import tp5ingsw4k9.Profesor;
 
 /**
  *

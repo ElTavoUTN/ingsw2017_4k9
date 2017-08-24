@@ -15,8 +15,8 @@ import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
-import proyectotestunitario.Alumno;
-import proyectotestunitario.Ejercicio;
+import tp5ingsw4k9.Alumno;
+import tp5ingsw4k9.Ejercicio;
 
 /**
  *
