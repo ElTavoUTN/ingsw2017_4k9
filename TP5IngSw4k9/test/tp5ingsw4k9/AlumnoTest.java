@@ -31,12 +31,12 @@ public class AlumnoTest {
     @Test
     public void testAltaAlumno() {
         System.out.println("altaAlumno");
-        String us = "";
-        String con = "";
-        int leg = 0;
-        String nomb = "";
-        int cuilp = 0;
-        boolean expResult = false;
+        String us = "Matias";
+        String con = "123456789";
+        int leg = 34711;
+        String nomb = "Matias Corvalan";
+        int cuilp = 34658987;
+        boolean expResult = true;
         boolean result = Alumno.altaAlumno(us, con, leg, nomb, cuilp);
         assertEquals(expResult, result);
 
@@ -48,11 +48,11 @@ public class AlumnoTest {
      */
     @Test
     public void testCambiarContrasenia() {
-        System.out.println("cambiarContrasenia");
-        String us = "";
-        String cont = "";
+        System.out.println("cambiarContraseña");
+        String us = "german0";
+        String cont = "1234578";
         Alumno instance = new Alumno();
-        boolean expResult = false;
+        boolean expResult = true;
         boolean result = instance.cambiarContrasenia(us, cont);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
@@ -65,12 +65,12 @@ public class AlumnoTest {
     @Test
     public void testCalcularNuevoNivel() {
         System.out.println("calcularNuevoNivel");
-        int puntajeActual = 0;
-        int expResult = 0;
+        int puntajeActual = 250;
+        int expResult = 3;
         int result = Alumno.calcularNuevoNivel(puntajeActual);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+//        fail("The test case is a prototype.");
     }
     
 }

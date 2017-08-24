@@ -11,12 +11,13 @@ public int puntaje;
 
 
 
-    public Ejercicio(int codEj, String expresion, int resultado, Nivel nivelEj, int calificacion) {
+    public boolean Ejercicio(int codEj, String expresion, int resultado, Nivel nivelEj, int calificacion) {
         this.codEj = codEj;
         this.expresion = expresion;
         this.resultado = resultado;
         this.nivelEj = nivelEj;
         this.puntaje = calificacion;
+        return true;
     }
 
     public Ejercicio() {

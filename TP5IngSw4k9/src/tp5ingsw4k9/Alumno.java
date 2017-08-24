@@ -50,13 +50,11 @@ public static boolean altaAlumno(String us, String con, int leg, String nomb, in
 public boolean cambiarContrasenia(String us, String cont) {
 
  boolean iscreated = true;
-     
-     
+ 
      if (cont.length()<6){  // valida que la contraseña se mayor o igual a 6 caracteres.
      iscreated = false;
      return iscreated;
      }
-     
      this.contrasenia = cont;
      return iscreated;    
 }

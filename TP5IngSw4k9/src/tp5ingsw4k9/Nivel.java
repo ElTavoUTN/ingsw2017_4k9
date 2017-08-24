@@ -4,11 +4,10 @@ public class Nivel {
 
     public int numeroNivel;
     public String descripcion;
-    public int rangoDesde;
-    public int rangoHasta;
+    public int rangoDesde=0;
+    public int rangoHasta=100;
 
     public Nivel(int numeroNivel, String descripcion, int rangoDesde, int rangoHasta) {
-        
         
         this.numeroNivel = numeroNivel;
         

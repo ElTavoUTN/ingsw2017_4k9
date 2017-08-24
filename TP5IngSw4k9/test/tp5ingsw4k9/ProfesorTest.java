@@ -33,16 +33,14 @@ public class ProfesorTest {
      */
     @Test
     public void testAltaProfesor() {
-        System.out.println("altaProfesor");
-        String us = "";
-        String con = "";
-        String nomb = "";
-        int cuil = 0;
+        System.out.println("Alta Profesor");
+        String us = "Oscar";      
+        String con = "123456789";
+        String nomb = "Oscar Leon";
+        int cuil = 252346;
         boolean expResult = false;
         boolean result = Profesor.altaProfesor(us, con, nomb, cuil);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
     
 }
