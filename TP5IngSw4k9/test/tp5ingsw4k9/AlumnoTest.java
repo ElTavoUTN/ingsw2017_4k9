@@ -31,16 +31,15 @@ public class AlumnoTest {
     @Test
     public void testAltaAlumno() {
         System.out.println("altaAlumno");
-        String us = "Matias";
-        String con = "123456789";
-        int leg = 34711;
-        String nomb = "Matias Corvalan";
-        int cuilp = 34658987;
+        String us = "Llanca";
+        String con = "9876456789";
+        int leg = 34783;
+        String nomb = "Llanca Crupi";
+        int cuilp = 346987687;
         boolean expResult = true;
         boolean result = Alumno.altaAlumno(us, con, leg, nomb, cuilp);
         assertEquals(expResult, result);
 
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -65,8 +64,8 @@ public class AlumnoTest {
     @Test
     public void testCalcularNuevoNivel() {
         System.out.println("calcularNuevoNivel");
-        int puntajeActual = 250;
-        int expResult = 3;
+        int puntajeActual = 350;
+        int expResult = 4;
         int result = Alumno.calcularNuevoNivel(puntajeActual);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.

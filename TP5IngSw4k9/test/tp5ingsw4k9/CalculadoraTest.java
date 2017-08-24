@@ -48,9 +48,9 @@ public class CalculadoraTest {
     @Test
     public void testRestar() {
         System.out.println("restar");
-        int a = 8;
+        int a = 18;
         int b = 3;
-        int expResult = 5;
+        int expResult = 15;
         int result = Calculadora.restar(a, b);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.

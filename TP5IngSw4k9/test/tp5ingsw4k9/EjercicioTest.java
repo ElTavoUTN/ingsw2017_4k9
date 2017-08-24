@@ -35,17 +35,15 @@ public class EjercicioTest {
     @Test
     public void testEjercicio() {
         System.out.println("Ejercicio");
-        int codEj = 0;
-        String expresion = "";
-        int resultado = 0;
+        int codEj = 2+1;
+        String expresion = "Suma";
+        int resultado = 3;
         Nivel nivelEj = null;
-        int calificacion = 0;
+        int calificacion = 1;
         Ejercicio instance = new Ejercicio();
         boolean expResult = false;
         boolean result = instance.Ejercicio(codEj, expresion, resultado, nivelEj, calificacion);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
     
 }
