@@ -62,6 +62,9 @@ public class NuevoUsuario extends javax.swing.JFrame {
             }
         });
 
+        jPasswordField2.setMinimumSize(new java.awt.Dimension(14, 24));
+        jPasswordField2.setPreferredSize(new java.awt.Dimension(14, 24));
+
         btnCancelar.setText("Cancelar");
         btnCancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -110,7 +113,7 @@ public class NuevoUsuario extends javax.swing.JFrame {
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                             .addComponent(jTextField2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jPasswordField2)
+                                            .addComponent(jPasswordField2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                             .addComponent(jTextField3))
                                         .addGap(1, 1, 1)))))))
                 .addGap(18, 18, 18)
@@ -138,10 +141,10 @@ public class NuevoUsuario extends javax.swing.JFrame {
                     .addComponent(jLabel3)
                     .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel4)
-                    .addComponent(jPasswordField2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(21, 21, 21)
+                    .addComponent(jPasswordField2, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
                     .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -183,6 +186,8 @@ public class NuevoUsuario extends javax.swing.JFrame {
                 st.setInt(5, alumno.prof.CUIL);
 
                 st.execute();
+                JOptionPane.showMessageDialog(null, "Se creo " + alumno.usuario + " satisfactoriamente.");
+
             } catch (SQLException ex) {
                 Logger.getLogger(CrearEjercicio.class.getName()).log(Level.SEVERE, null, ex);
                 JOptionPane.showMessageDialog(null, "No se ha podido Guardar.");
@@ -215,6 +220,13 @@ public class NuevoUsuario extends javax.swing.JFrame {
                 st.setInt(4, prof.CUIL);
 
                 st.execute();
+
+                JOptionPane.showMessageDialog(null, "Se creo " + prof.usuario + " satisfactoriamente con nro de CUIL: " + prof.CUIL);
+
+                this.setVisible(false);
+                Principal ppal = new Principal();
+                ppal.setVisible(true);
+
             } catch (SQLException ex) {
                 Logger.getLogger(CrearEjercicio.class.getName()).log(Level.SEVERE, null, ex);
                 JOptionPane.showMessageDialog(null, "No se ha podido Guardar.");
