@@ -53,12 +53,9 @@ public class CalculadoraTest {
         int expResult = 15;
         int result = Calculadora.restar(a, b);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
     }
 
-    /**
-     * Test of multiplicar method, of class Calculadora.
-     */
+   
     @Test
     public void testMultiplicar() {
         System.out.println("multiplicar");
