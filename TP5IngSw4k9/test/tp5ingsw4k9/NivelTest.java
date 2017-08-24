@@ -38,8 +38,6 @@ public class NivelTest {
         int expResult = 0;
         int result = instance.getNumeroNivel();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -78,8 +76,6 @@ public class NivelTest {
         String descripcion = "";
         Nivel instance = new Nivel();
         instance.setDescripcion(descripcion);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -92,8 +88,6 @@ public class NivelTest {
         int expResult = 0;
         int result = instance.getRangoDesde();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -105,8 +99,6 @@ public class NivelTest {
         int rangoDesde = 0;
         Nivel instance = new Nivel();
         instance.setRangoDesde(rangoDesde);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -116,11 +108,9 @@ public class NivelTest {
     public void testGetRangoHasta() {
         System.out.println("getRangoHasta");
         Nivel instance = new Nivel();
-        int expResult = 0;
+        int expResult = 100;
         int result = instance.getRangoHasta();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -129,11 +119,10 @@ public class NivelTest {
     @Test
     public void testSetRangoHasta() {
         System.out.println("setRangoHasta");
-        int rangoHasta = 0;
+        int rangoHasta = 22;
         Nivel instance = new Nivel();
         instance.setRangoHasta(rangoHasta);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -142,14 +131,12 @@ public class NivelTest {
     @Test
     public void testCrearNivel() {
         System.out.println("crearNivel");
-        String desc = "";
-        int rDesde = 0;
-        int rHasta = 0;
-        boolean expResult = false;
+        String desc = "Basico";
+        int rDesde = 1;
+        int rHasta = 100;
+        boolean expResult = true;
         boolean result = Nivel.crearNivel(desc, rDesde, rHasta);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
     
 }
