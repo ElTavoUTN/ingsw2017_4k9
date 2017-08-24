@@ -28,9 +28,7 @@ public class ProfesorTest {
     public void tearDown() {
     }
 
-    /**
-     * Test of altaProfesor method, of class Profesor.
-     */
+    
     @Test
     public void testAltaProfesor() {
         System.out.println("altaProfesor");
