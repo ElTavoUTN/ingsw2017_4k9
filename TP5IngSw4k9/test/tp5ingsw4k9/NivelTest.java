@@ -32,31 +32,24 @@ public class NivelTest {
     /**
      * Test of getNumeroNivel method, of class Nivel.
      */
-    @Test
-    public void testGetNumeroNivel() {
-        System.out.println("getNumeroNivel");
-        Nivel instance = new Nivel();
-        int expResult = 0;
-        int result = instance.getNumeroNivel();
-        assertEquals(expResult, result);
-    }
-
+  
     /**
      * Test of setNumeroNivel method, of class Nivel.
      */
-    @Test
-    public void testSetNumeroNivel() {
-        System.out.println("setNumeroNivel");
-        int numeroNivel = 0;
-        Nivel instance = new Nivel();
-        instance.setNumeroNivel(numeroNivel);
+      @Test
+         public void testGetNumeroNivel() {
+        System.out.println("getNumeroNivel");
+        Nivel instance = null;
+        int expResult = 0;
+        int result = instance.getNumeroNivel();
+        assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
-
+/**
     /**
      * Test of getDescripcion method, of class Nivel.
-     */
+     
     @Test
     public void testGetDescripcion() {
         System.out.println("getDescripcion");
@@ -70,7 +63,7 @@ public class NivelTest {
 
     /**
      * Test of setDescripcion method, of class Nivel.
-     */
+     
     @Test
     public void testSetDescripcion() {
         System.out.println("setDescripcion");
@@ -81,7 +74,7 @@ public class NivelTest {
 
     /**
      * Test of getRangoDesde method, of class Nivel.
-     */
+     
     @Test
     public void testGetRangoDesde() {
         System.out.println("getRangoDesde");
@@ -93,7 +86,7 @@ public class NivelTest {
 
     /**
      * Test of setRangoDesde method, of class Nivel.
-     */
+     
     @Test
     public void testSetRangoDesde() {
         System.out.println("setRangoDesde");
@@ -104,7 +97,7 @@ public class NivelTest {
 
     /**
      * Test of getRangoHasta method, of class Nivel.
-     */
+     
     @Test
     public void testGetRangoHasta() {
         System.out.println("getRangoHasta");
@@ -116,7 +109,7 @@ public class NivelTest {
 
     /**
      * Test of setRangoHasta method, of class Nivel.
-     */
+     
     @Test
     public void testSetRangoHasta() {
         System.out.println("setRangoHasta");
