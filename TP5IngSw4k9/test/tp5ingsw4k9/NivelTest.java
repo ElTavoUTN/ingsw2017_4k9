@@ -1,6 +1,7 @@
 package tp5ingsw4k9;
 //prueba ok
 //
+
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -9,22 +10,22 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class NivelTest {
-    
+
     public NivelTest() {
     }
-    
+
     @BeforeClass
     public static void setUpClass() {
     }
-    
+
     @AfterClass
     public static void tearDownClass() {
     }
-    
+
     @Before
     public void setUp() {
     }
-    
+
     @After
     public void tearDown() {
     }
@@ -32,12 +33,11 @@ public class NivelTest {
     /**
      * Test of getNumeroNivel method, of class Nivel.
      */
-  
     /**
      * Test of setNumeroNivel method, of class Nivel.
      */
-      @Test
-         public void testGetNumeroNivel() {
+    @Test
+    public void testGetNumeroNivel() {
         System.out.println("getNumeroNivel");
         Nivel instance = null;
         int expResult = 0;
@@ -46,10 +46,7 @@ public class NivelTest {
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
-/**
-    /**
-     * Test of getDescripcion method, of class Nivel.
-     
+
     @Test
     public void testGetDescripcion() {
         System.out.println("getDescripcion");
@@ -61,9 +58,6 @@ public class NivelTest {
         fail("The test case is a prototype.");
     }
 
-    /**
-     * Test of setDescripcion method, of class Nivel.
-     
     @Test
     public void testSetDescripcion() {
         System.out.println("setDescripcion");
@@ -72,9 +66,6 @@ public class NivelTest {
         instance.setDescripcion(descripcion);
     }
 
-    /**
-     * Test of getRangoDesde method, of class Nivel.
-     
     @Test
     public void testGetRangoDesde() {
         System.out.println("getRangoDesde");
@@ -84,9 +75,6 @@ public class NivelTest {
         assertEquals(expResult, result);
     }
 
-    /**
-     * Test of setRangoDesde method, of class Nivel.
-     
     @Test
     public void testSetRangoDesde() {
         System.out.println("setRangoDesde");
@@ -95,9 +83,6 @@ public class NivelTest {
         instance.setRangoDesde(rangoDesde);
     }
 
-    /**
-     * Test of getRangoHasta method, of class Nivel.
-     
     @Test
     public void testGetRangoHasta() {
         System.out.println("getRangoHasta");
@@ -107,9 +92,6 @@ public class NivelTest {
         assertEquals(expResult, result);
     }
 
-    /**
-     * Test of setRangoHasta method, of class Nivel.
-     
     @Test
     public void testSetRangoHasta() {
         System.out.println("setRangoHasta");
@@ -119,9 +101,6 @@ public class NivelTest {
 
     }
 
-    /**
-     * Test of crearNivel method, of class Nivel.
-     */
     @Test
     public void testCrearNivel() {
         System.out.println("crearNivel");
@@ -132,5 +111,5 @@ public class NivelTest {
         boolean result = Nivel.crearNivel(desc, rDesde, rHasta);
         assertEquals(expResult, result);
     }
-    
+
 }
