@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Vista;
 
 import ConexionBD.ConectarBD;
@@ -15,38 +10,31 @@ import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import tp5ingsw4k9.Alumno;
-import tp5ingsw4k9.Ejercicio;
 import tp5ingsw4k9.Profesor;
 
-/**
- *
- * @author German C. Morales_2
- */
 public class MenuProfesor extends javax.swing.JFrame {
 
     Profesor pro;
-    
-    
+
     public MenuProfesor() {
-    initComponents();
-    }
-
-    
-    
-    public MenuProfesor(Profesor p) {
-        this.pro=p;
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
-   
+    public MenuProfesor(Profesor p) {
+        this.pro = p;
+        initComponents();
+        this.setLocationRelativeTo(null);
+    }
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
+        btnEstadisticas = new javax.swing.JButton();
+        btnCrearEjercicio = new javax.swing.JButton();
+        btnSalir = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -57,24 +45,24 @@ public class MenuProfesor extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel1.setText("Menú del Profesor");
 
-        jButton1.setText("Ver estadisticas de sus alumnos ");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnEstadisticas.setText("Ver estadisticas de sus alumnos ");
+        btnEstadisticas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnEstadisticasActionPerformed(evt);
             }
         });
 
-        jButton2.setText("Crear Ejercicios");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btnCrearEjercicio.setText("Crear Ejercicios");
+        btnCrearEjercicio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btnCrearEjercicioActionPerformed(evt);
             }
         });
 
-        jButton6.setText("Salir");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
+        btnSalir.setText("Salir");
+        btnSalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+                btnSalirActionPerformed(evt);
             }
         });
 
@@ -92,7 +80,6 @@ public class MenuProfesor extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jLabel4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(88, 88, 88)
@@ -108,11 +95,11 @@ public class MenuProfesor extends javax.swing.JFrame {
                                 .addComponent(jLabel5))))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jButton6)
+                            .addComponent(btnSalir)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btnEstadisticas, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(jButton2)))
+                                .addComponent(btnCrearEjercicio)))
                         .addContainerGap(28, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
@@ -129,58 +116,57 @@ public class MenuProfesor extends javax.swing.JFrame {
                             .addComponent(jLabel5))
                         .addGap(131, 131, 131)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton1)
-                            .addComponent(jButton2))
+                            .addComponent(btnEstadisticas)
+                            .addComponent(btnCrearEjercicio))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton6))
+                        .addComponent(btnSalir))
                     .addComponent(jLabel4)))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       try {
-           ArrayList<Alumno> listAl = new ArrayList();
-           
+    private void btnEstadisticasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEstadisticasActionPerformed
+        try {
+            ArrayList<Alumno> listAl = new ArrayList();
+
             ConectarBD con = new ConectarBD();
-            Connection cn=null;
+            Connection cn = null;
             cn = con.getCon();
-                
-                String sql = "SELECT * FROM alumno WHERE CuilProfesor='"+pro.CUIL+"'";
-                
-                Statement st = (Statement) cn.createStatement();
-                ResultSet rs = st.executeQuery(sql);
-                
-                while(rs.next()){
-                   Alumno al = new Alumno();
-                    al.nombre = rs.getString("nombre");
-                    al.puntajeAcumulado = parseInt(rs.getString("puntajeAcumulado"));
-                    listAl.add(al);
-                }
-               Estadisticas est = new Estadisticas(listAl);
-               est.setVisible(true);
-                
+
+            String sql = "SELECT * FROM alumno WHERE CuilProfesor='" + pro.CUIL + "'";
+
+            Statement st = (Statement) cn.createStatement();
+            ResultSet rs = st.executeQuery(sql);
+
+            while (rs.next()) {
+                Alumno al = new Alumno();
+                al.nombre = rs.getString("nombre");
+                al.puntajeAcumulado = parseInt(rs.getString("puntajeAcumulado"));
+                listAl.add(al);
+            }
+            Estadisticas est = new Estadisticas(listAl);
+            est.setVisible(true);
+
         } catch (SQLException ex) {
             Logger.getLogger(MenuAlumno.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnEstadisticasActionPerformed
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-       this.setVisible(false);
-    }//GEN-LAST:event_jButton6ActionPerformed
+    private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
+        this.setVisible(false);
+        Principal ppal = new Principal();
+        ppal.setVisible(true);
+    }//GEN-LAST:event_btnSalirActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-    
+    private void btnCrearEjercicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearEjercicioActionPerformed
+
         CrearEjercicio cEj = new CrearEjercicio();
         cEj.setVisible(true);
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_btnCrearEjercicioActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
+
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
@@ -203,7 +189,6 @@ public class MenuProfesor extends javax.swing.JFrame {
         }
         //</editor-fold>
 
-        /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new MenuProfesor().setVisible(true);
@@ -212,9 +197,9 @@ public class MenuProfesor extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton6;
+    private javax.swing.JButton btnCrearEjercicio;
+    private javax.swing.JButton btnEstadisticas;
+    private javax.swing.JButton btnSalir;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

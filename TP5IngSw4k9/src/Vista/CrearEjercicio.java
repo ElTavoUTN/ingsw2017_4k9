@@ -5,14 +5,10 @@ import static java.lang.Integer.parseInt;
 import java.util.Random;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import tp5ingsw4k9.Alumno;
 import tp5ingsw4k9.Ejercicio;
 
 public class CrearEjercicio extends javax.swing.JFrame {

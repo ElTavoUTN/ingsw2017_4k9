@@ -7,8 +7,8 @@ public class CalculadoraVista extends javax.swing.JFrame {
 
     public CalculadoraVista() {
         initComponents();
-
-        
+        this.setLocationRelativeTo(null);
+    
     }
 
     @SuppressWarnings("unchecked")
@@ -198,7 +198,7 @@ public class CalculadoraVista extends javax.swing.JFrame {
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
     private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jComboBox2ActionPerformed
 
     private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
@@ -242,7 +242,7 @@ public class CalculadoraVista extends javax.swing.JFrame {
     }//GEN-LAST:event_btnResolverDistribucionActionPerformed
 
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
+
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
@@ -264,10 +264,7 @@ public class CalculadoraVista extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(CalculadoraVista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
+       java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new CalculadoraVista().setVisible(true);
             }
